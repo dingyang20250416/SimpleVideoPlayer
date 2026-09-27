@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单视频播放器</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎬 简单视频播放器</h1>
+            <p>一个简单、易用的 HTML5 视频播放器</p>
+        </header>
+        
+        <div class="video-player-wrapper">
+            <div class="controls">
+                <button class="control-btn" id="playBtn" title="播放/暂停">▶ 播放</button>
+                <button class="control-btn" id="volumeBtn" title="音量">🔊 音量</button>
+                <div class="progress-container">
+                    <input type="range" class="progress-bar" id="progressBar" value="0" min="0" max="100">
+                    <span class="progress-value" id="progressValue">0%</span>
+                </div>
+                <button class="control-btn" id="muteBtn" title="静音/静音">🔇 静音</button>
+            </div>
+            
+            <div class="video-container">
+                <div class="video-placeholder" id="videoPlaceholder">
+                    <span>📹</span>
+                    <p>点击播放视频</p>
+                </div>
+                <video class="video-player" id="videoPlayer" controls>
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                    您的浏览器不支持 HTML5 视频。
+                </video>
+            </div>
+            
+            <div class="video-info">
+                <h3>Big Buck Bunny</h3>
+                <p class="description">这是一段经典的海量视频，展示了视频播放器的各种功能。</p>
+                <p class="duration">时长：4:58</p>
+                <p class="quality">质量：1080p</p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2025 SimpleVideoPlayer</p>
+        </footer>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
